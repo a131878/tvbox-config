@@ -1,0 +1,51 @@
+{
+  "spider": "0",
+  "wallpaper": "http://110.41.68.68:8899/static/bg.jpg",
+  "sites": [
+    {
+      "key": "LibreTV",
+      "name": "LibreTV聚合",
+      "type": "3",
+      "api": "http://110.41.68.68:8899/api/v1/vod",
+      "playUrl": "http://110.41.68.68:8899/api/v1/play?vid={vid}",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+      },
+      "ext": {
+        "pass": "123456"
+      }
+    }
+  ],
+  "parses": [
+    {
+      "name": "LibreTV内置解析",
+      "type": "parse",
+      "url": "http://110.41.68.68:8899/api/v1/parse?url={url}"
+    }
+  ],
+  "lives": [
+    {
+      "name": "LibreTV直播",
+      "type": "1",
+      "url": "http://110.41.68.68:8899/api/v1/live",
+      "logo": "http://110.41.68.68:8899/static/logo.png"
+    }
+  ],
+  "doh": [
+    {
+      "name": "阿里DoH",
+      "url": "https://dns.alidns.com/dns-query"
+    }
+  ],
+  "rules": [
+    {
+      "name": "LibreTV规则",
+      "regex": "http://110.41.68.68:8899/.*",
+      "script": "",
+      "enabled": 1
+    }
+  ]
+}
