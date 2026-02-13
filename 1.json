@@ -43,7 +43,7 @@
   "rules": [
     {
       "name": "LibreTV规则",
-      "regex": "http://110.41.68.68:8899/.*",
+      "regex": ["http://110.41.68.68:8899/.*"],
       "script": "",
       "enabled": 1
     }
